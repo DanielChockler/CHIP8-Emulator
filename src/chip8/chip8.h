@@ -15,8 +15,11 @@ private:
     uint8_t soundTimer;
     
 public:
+    uint8_t gfx[64 * 32];
+    uint8_t key[16];
     void initialise();
     void emulateCycle();
     bool loadGame(const char* filename);
-    void setKeys();
+
+    bool drawFlag;
 };
